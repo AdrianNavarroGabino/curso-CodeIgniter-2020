@@ -11,6 +11,20 @@ class TestController extends CI_Controller {
 
 	public function prueba()
 	{
+
+		$this->load->library('LibreriaClass');
+
+		$l = $this->libreriaclass->miClase();
+
+		print_r($l);
+
+		/*
+		## Sirve para parar la ejecución.
+		## Lo quitamos porque queremos que siga.
+		die;
+		*/
+
+		$this->load->helper('utiles');
 		
 		$usuarios = $this->TestModel->primera();
 		$usuario2 = $this->TestModel->devolverUnUsuario(2);
@@ -32,6 +46,12 @@ class TestController extends CI_Controller {
 		);
 		$parametros['usuarios'] = $usuarios;
 		$parametros['usuario2'] = $usuario2;
+
+		/*
+		## Podemos mostrarlo desde aquí o desde la vista.
+		debug($parametros);
+		die;
+		*/
 
 		$this->load->view('prueba', $parametros);
 	}
