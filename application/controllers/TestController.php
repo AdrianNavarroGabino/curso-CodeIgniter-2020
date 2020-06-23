@@ -5,7 +5,13 @@ class TestController extends CI_Controller {
 
 	public function prueba()
 	{
-		//$this->load->view('');
-		echo "hola";
+		$parametros['param1'] = "valor1";
+		$parametros['param2'] = "valor2";
+		$parametros['param3'] = array(
+			'p1' => 'soy p1',
+			'p2' => 'soy p2'
+		);
+
+		$this->load->view('prueba', $parametros);
 	}
 }
