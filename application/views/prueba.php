@@ -13,6 +13,14 @@
 		echo "Param3: <pre>";
 		print_r($param3);
 		echo "</pre>";
+
+		echo "Usuarios: <pre>";
+		print_r($usuarios);
+		echo "</pre>";
+
+		echo "Usuario 2: <pre>";
+		print_r($usuario2);
+		echo "</pre>";
 	?>
 </body>
 </html>
