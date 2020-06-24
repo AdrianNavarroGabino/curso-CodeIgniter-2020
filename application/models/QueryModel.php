@@ -35,4 +35,19 @@ class QueryModel extends CI_Model {
 		return ($this->executeArrayResults($sql));
 		*/
 	}
+
+	public function insert($tabla, $datos) {
+
+		$insert = $this->db->insert($tabla, $datos);
+	}
+
+	public function update($tabla, $datos, $where) {
+
+		$insert = $this->db->update($tabla, $datos, $where);
+	}
+
+	public function delete($tabla, $where) {
+
+		$insert = $this->db->delete($tabla, $where);
+	}
 }

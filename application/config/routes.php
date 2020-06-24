@@ -54,6 +54,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['prueba'] = 'TestController/prueba';
 # http://localhost/CodeIgniter/index.php/consultas
 $route['consultas'] = 'ConsultasController/index';
+# http://localhost/CodeIgniter/index.php/insert
+$route['insert'] = 'ConsultasController/insert';
+# http://localhost/CodeIgniter/index.php/update
+$route['update'] = 'ConsultasController/update';
+# http://localhost/CodeIgniter/index.php/delete
+$route['delete'] = 'ConsultasController/delete';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
