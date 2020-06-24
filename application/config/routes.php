@@ -64,6 +64,8 @@ $route['delete'] = 'ConsultasController/delete';
 
 $route['admin'] = 'AdminController/index';
 $route['admin/registro'] = 'AdminController/registro';
+$route['add_autor'] = 'AdminController/addAutor';
+$route['list'] = 'AdminController/list';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
