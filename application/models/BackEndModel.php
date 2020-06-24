@@ -31,4 +31,13 @@ class BackEndModel extends CI_Model {
 
     $this->db->insert($tabla, $datos);
   }
+
+  public function login($datos) {
+
+    $sql = "select * from authors where email = '" . $datos['email'] .
+      "' and password = '" . $datos['password'] . "'";
+
+    return ($this->ExecuteArrayResults($sql));
+
+  }
 }
