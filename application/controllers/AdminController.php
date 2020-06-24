@@ -51,6 +51,7 @@ class AdminController extends CI_Controller {
 			$datos['enabled'] = 0;
 		}
 
+		$datos['password'] = md5($datos['password']);
 		$this->BackEndModel->insert('authors', $datos);
 
 		header("location: list");
@@ -63,7 +64,16 @@ class AdminController extends CI_Controller {
 
 	public function login() {
 
-		$datos = array();
+		if($this->uri->segment(3) ==! null && $this->uri->segment(3) == 'error') {
+
+			$datos = array(
+				'error' => "Usuario o contraseña invalidos"
+			);
+		}
+		else {
+
+			$datos = array();
+		}
 
 		$vista = array(
 			'vista' => 'admin/login.php',
@@ -77,10 +87,16 @@ class AdminController extends CI_Controller {
 	public function login2() {
 
 		$datos['email'] = $_POST['email_login'];
-		$datos['password'] = $_POST['login_password'];
+		$datos['password'] = md5($_POST['login_password']);
 
 		$user = $this->BackEndModel->login($datos);
 
-		header("location: list");
+		if(empty($user)) {
+
+			header("location: login/error");
+		}
+		else {
+			header("location: ../list");
+		}
 	}
 }

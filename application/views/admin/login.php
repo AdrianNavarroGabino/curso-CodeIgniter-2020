@@ -8,7 +8,7 @@
         # Si existe la variable error que envia el controlardo mostraremos el error.
         if ( isset( $error))
         {
-          echo "<div class='error'>$error</div>";
+          echo "<div class='error' style='color: red;'>$error</div>";
         }
 
       ?>
