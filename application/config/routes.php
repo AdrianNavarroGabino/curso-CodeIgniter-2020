@@ -61,6 +61,9 @@ $route['update'] = 'ConsultasController/update';
 # http://localhost/CodeIgniter/index.php/delete
 $route['delete'] = 'ConsultasController/delete';
 
+
+$route['admin'] = 'AdminController/index';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
