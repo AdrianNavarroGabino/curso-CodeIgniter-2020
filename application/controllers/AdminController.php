@@ -59,7 +59,15 @@ class AdminController extends CI_Controller {
 
 	public function list() {
 
-		echo "pagina listado";
+		$posts = $this->BackEndModel->listPosts();
+
+		$vista = array(
+			'vista' => 'admin/index.php',
+			'params' => array(),
+			'layout' => 'ly_home.php',
+			'titulo' => 'Prueba de controlador login'
+		);
+		$this->layoutblog->view($vista);
 	}
 
 	public function login() {

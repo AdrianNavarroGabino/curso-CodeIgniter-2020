@@ -37,7 +37,12 @@ class BackEndModel extends CI_Model {
     $sql = "select * from authors where email = '" . $datos['email'] .
       "' and password = '" . $datos['password'] . "'";
 
-    return ($this->ExecuteArrayResults($sql));
+    return ($this->executeArrayResults($sql));
+  }
 
+  public function listPosts() {
+
+    $sql = "select * from posts order by id desc";
+    return ($this->executeArrayResults($sql));
   }
 }
