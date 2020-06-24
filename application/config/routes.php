@@ -63,6 +63,7 @@ $route['delete'] = 'ConsultasController/delete';
 
 
 $route['admin'] = 'AdminController/index';
+$route['admin/registro'] = 'AdminController/registro';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
