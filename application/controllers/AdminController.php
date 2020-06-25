@@ -107,4 +107,24 @@ class AdminController extends CI_Controller {
 			header("location: ../list");
 		}
 	}
+
+	public function newPost() {
+		
+		$authors = $this->BackEndModel->listAuthors();
+
+		$datos = array('authors' => $authors);
+
+		$vista = array(
+			'vista' => 'admin/new_post.php',
+			'params' => $datos,
+			'layout' => 'ly_home.php',
+			'titulo' => 'Prueba de controlador login'
+		);
+		$this->layoutblog->view($vista);
+	}
+
+	public function addPost() {
+		
+		debug($_POST);
+	}
 }

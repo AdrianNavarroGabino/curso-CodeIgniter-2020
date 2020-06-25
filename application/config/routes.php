@@ -69,6 +69,8 @@ $route['list'] = 'AdminController/list';
 $route['admin/login'] = 'AdminController/login';
 $route['admin/login2'] = 'AdminController/login2';
 $route['admin/login/error'] = 'AdminController/login';
+$route['new_post'] = 'AdminController/newPost';
+$route['add'] = 'AdminController/addPost';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

@@ -45,4 +45,10 @@ class BackEndModel extends CI_Model {
     $sql = "select * from posts order by id desc";
     return ($this->executeArrayResults($sql));
   }
+
+  public function listAuthors() {
+
+    $sql = "select * from authors order by display_name asc";
+    return ($this->executeArrayResults($sql));
+  }
 }

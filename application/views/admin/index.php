@@ -6,7 +6,7 @@
       </div>
     </div>
     <br><br>
-    <a href="/new_post" class="btn btn-primary">Nuevo post</a>
+    <a href="new_post" class="btn btn-primary">Nuevo post</a>
     <br><br>
     <div class="row">
     	<div class="col-lg-12 text-center">
