@@ -83,7 +83,7 @@
             <label for="categoria" class="col-lg-2 col-form-label">Creado</label>
              
               <div class="col-lg-3 text-lett">
-                <input type="text" class="form-control" id="created" name="created" placeholder="">
+                <input type="text" class="form-control" id="created" name="created" placeholder="" value="<?php echo date("Y-m-d G:i:s");?>">
             </div>
             
           </div>

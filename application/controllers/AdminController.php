@@ -61,9 +61,13 @@ class AdminController extends CI_Controller {
 
 		$posts = $this->BackEndModel->listPosts();
 
+		$datos = array(
+			'posts' => $posts
+		);
+
 		$vista = array(
 			'vista' => 'admin/index.php',
-			'params' => array(),
+			'params' => $datos,
 			'layout' => 'ly_home.php',
 			'titulo' => 'Prueba de controlador login'
 		);
@@ -125,6 +129,21 @@ class AdminController extends CI_Controller {
 
 	public function addPost() {
 		
-		debug($_POST);
+		foreach ($_POST as $key => $value) {
+			
+			$datos[$key] = $value;
+		}
+
+		if(isset($datos['enabled'])) {
+
+			$datos['enabled'] = 1;
+		}
+		else {
+			$datos['enabled'] = 0;
+		}
+
+		$this->BackEndModel->insert('posts', $datos);
+
+		header("location: list");
 	}
 }
