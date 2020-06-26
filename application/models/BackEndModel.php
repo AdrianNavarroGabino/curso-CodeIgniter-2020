@@ -48,6 +48,11 @@ class BackEndModel extends CI_Model {
     $this->db->update($tabla, $datos, $where);
   }
 
+  public function delete($tabla, $where) {
+
+    $this->db->delete($tabla, $where);
+  }
+
   public function login($datos) {
 
     $sql = "select * from authors where email = '" . $datos['email'] .

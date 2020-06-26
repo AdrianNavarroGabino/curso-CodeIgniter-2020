@@ -243,4 +243,22 @@ class AdminController extends CI_Controller {
 
 		header("location: autores");
 	}
+
+	public function delete() {
+
+		$where = array('id' => $this->uri->segment(2));
+
+		$this->BackEndModel->delete('posts', $where);
+
+		header("location: ../list");
+	}
+
+	public function deleteAutor() {
+
+		$where = array('id' => $this->uri->segment(2));
+
+		$this->BackEndModel->delete('authors', $where);
+
+		header("location: ../autores");
+	}
 }

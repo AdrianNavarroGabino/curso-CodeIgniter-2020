@@ -1,3 +1,20 @@
+<script type="text/javascript">
+  
+  function delete_post( id)
+  {
+    var ok = confirm( "¿ Seguro de borrar este post ? ");
+    if ( !ok)
+    {
+      return false;
+    }
+    else
+    {
+      location.href = "delete_post/" + id;
+    }
+  }
+
+</script>
+ 
  <div class="container">
     <div class="row">
       <div class="col-lg-12 text-lett">

@@ -9,7 +9,7 @@
     }
     else
     {
-      location.href = "/delete_author/" + id;
+      location.href = "delete_author/" + id;
     }
   }
 
