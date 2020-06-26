@@ -22,6 +22,17 @@ class BackEndModel extends CI_Model {
     return ( $rows);
   }
 
+  public function executeResultsParamsArray($sql, $params)
+  {
+
+    $query = $this->db->query($sql, $params);
+    $rows['data'] = $query->result_array();
+    $query->free_result();
+
+    return ($rows);
+
+  }
+
   public function execute($sql) {
 
     $this->db->query($sql);
@@ -50,5 +61,12 @@ class BackEndModel extends CI_Model {
 
     $sql = "select * from authors order by display_name asc";
     return ($this->executeArrayResults($sql));
+  }
+
+  public function listOnePost($post_id) {
+
+    $sql = "select * from posts where id = ?";
+    $params = array($post_id);
+    return ($this->executeResultsParamsArray($sql, $params));
   }
 }

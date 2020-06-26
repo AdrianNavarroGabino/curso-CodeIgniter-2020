@@ -161,4 +161,23 @@ class AdminController extends CI_Controller {
 		);
 		$this->layoutblog->view($vista);
 	}
+
+	public function edit() {
+
+		$post = $this->BackEndModel->listOnePost($this->uri->segment(2));
+		$authors = $this->BackEndModel->listAuthors();
+
+		$datos = array(
+			'post' => $post['data'],
+			'authors' => $authors
+		);
+
+		$vista = array(
+			'vista' => 'admin/edit_post.php',
+			'params' => $datos,
+			'layout' => 'ly_home.php',
+			'titulo' => 'Prueba de controlador login'
+		);
+		$this->layoutblog->view($vista);
+	}
 }
