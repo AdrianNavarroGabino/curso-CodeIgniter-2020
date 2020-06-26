@@ -18,7 +18,7 @@
 <body>
 
   <!-- Navigation -->
-    <?php require_once dirname(dirname(dirname(__FILE__))) . "/views/includes/menu.php"; ?>
+    <?php require_once dirname(dirname(dirname(__FILE__))) . "/views/includes/menu2.php"; ?>
   
   
 

@@ -22,7 +22,7 @@
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
         <br><br>
-        <a class="btn btn-lg btn-warning btn-block" href="registro">Alta nuevo autor</a>
+        <a class="btn btn-lg btn-warning btn-block" href="/CodeIgniter/index.php/admin/registro">Alta nuevo autor</a>
       </form>
     </div>
     <div class="col-lg-4"></div>

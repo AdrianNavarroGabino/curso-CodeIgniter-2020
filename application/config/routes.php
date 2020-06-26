@@ -78,7 +78,7 @@ $route['update'] = 'AdminController/update';
 $route['update_autor'] = 'AdminController/updateAutor';
 $route['delete_post/(:num)'] = 'AdminController/delete';
 $route['delete_author/(:num)'] = 'AdminController/deleteAutor';
+$route['default_controller'] = 'PostController/index';
 
-$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
