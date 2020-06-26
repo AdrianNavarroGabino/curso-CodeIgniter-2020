@@ -43,6 +43,11 @@ class BackEndModel extends CI_Model {
     $this->db->insert($tabla, $datos);
   }
 
+  public function update($tabla, $datos, $where) {
+
+    $this->db->update($tabla, $datos, $where);
+  }
+
   public function login($datos) {
 
     $sql = "select * from authors where email = '" . $datos['email'] .

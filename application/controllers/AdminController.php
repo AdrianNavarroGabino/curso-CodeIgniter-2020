@@ -180,4 +180,27 @@ class AdminController extends CI_Controller {
 		);
 		$this->layoutblog->view($vista);
 	}
+
+	public function update() {
+
+		foreach ($_POST as $key => $value) {
+			
+			$datos[$key] = $value;
+		}
+
+		if(isset($datos['enabled'])) {
+
+			$datos['enabled'] = 1;
+		}
+		else {
+			$datos['enabled'] = 0;
+		}
+
+		$where['id'] = $datos['id'];
+		unset($datos['id']);
+
+		$this->BackEndModel->update('posts', $datos, $where);
+
+		header("location: list");
+	}
 }

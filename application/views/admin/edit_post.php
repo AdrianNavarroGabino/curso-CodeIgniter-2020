@@ -47,7 +47,7 @@
     <div class="row">
       <div class="col-lg-12 text-left">
        
-        <form role="form" action="/update" method="post">
+        <form role="form" action="../update" method="post">
 
           <input type="hidden" name="id" id="id" value="<?php echo $post_id; ?>">
           <div class="form-group row">
