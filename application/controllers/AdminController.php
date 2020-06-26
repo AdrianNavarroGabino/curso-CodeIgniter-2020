@@ -203,4 +203,44 @@ class AdminController extends CI_Controller {
 
 		header("location: list");
 	}
+
+	public function editAutor() {
+
+		$autor = $this->BackEndModel->listOneAutor($this->uri->segment(2));
+
+		$datos = array(
+			'autor' => $autor['data']
+		);
+
+		$vista = array(
+			'vista' => 'admin/edit_autor.php',
+			'params' => $datos,
+			'layout' => 'ly_home.php',
+			'titulo' => 'Prueba de controlador login'
+		);
+		$this->layoutblog->view($vista);
+	}
+
+	public function updateAutor() {
+
+		foreach ($_POST as $key => $value) {
+			
+			$datos[$key] = $value;
+		}
+
+		if(isset($datos['enabled'])) {
+
+			$datos['enabled'] = 1;
+		}
+		else {
+			$datos['enabled'] = 0;
+		}
+
+		$where['id'] = $datos['id'];
+		unset($datos['id']);
+
+		$this->BackEndModel->update('authors', $datos, $where);
+
+		header("location: autores");
+	}
 }

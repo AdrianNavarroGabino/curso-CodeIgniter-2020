@@ -73,7 +73,9 @@ $route['new_post'] = 'AdminController/newPost';
 $route['add'] = 'AdminController/addPost';
 $route['autores'] = 'AdminController/autores';
 $route['edit/(:num)'] = 'AdminController/edit';
+$route['edit_autor/(:num)'] = 'AdminController/editAutor';
 $route['update'] = 'AdminController/update';
+$route['update_autor'] = 'AdminController/updateAutor';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

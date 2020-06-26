@@ -59,7 +59,7 @@
                     <td align=left>'.$autor['display_name'].'</td>
                     <td  align=left>'.$autor['email'].'</td>
                     <td>'.$enabled.'</td>
-                    <td><a href="/edit_autor/'.$autor['id'].'"><img src="/images/edit.png" width=20px></a></td>
+                    <td><a href="edit_autor/'.$autor['id'].'"><img src="/images/edit.png" width=20px></a></td>
                     <td><a href="#" OnClick="delete_author('.$autor['id'].')"><img src="/images/delete_2.png"  width=20px></a></td>
                   </tr>';
 

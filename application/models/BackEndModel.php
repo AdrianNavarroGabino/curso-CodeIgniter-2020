@@ -74,4 +74,11 @@ class BackEndModel extends CI_Model {
     $params = array($post_id);
     return ($this->executeResultsParamsArray($sql, $params));
   }
+
+  public function listOneAutor($post_id) {
+
+    $sql = "select * from authors where id = ?";
+    $params = array($post_id);
+    return ($this->executeResultsParamsArray($sql, $params));
+  }
 }
